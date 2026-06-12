@@ -4,9 +4,9 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className=" bg-white  backdrop-blur-xl ">
+    <header className=" bg-gray-800 shadow-lg py-3 text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#home" className="text-lg font-semibold  text-black">Ahmed Mohiuddin Ansari</a>
+        <h1 className="text-3xl font-bold text-blue-400">Portfolio</h1>
 
         <button
           type="button"
@@ -21,16 +21,16 @@ function Header() {
         <nav className={`absolute inset-x-4 top-full mt-2 rounded-3xl border border-slate-800 bg-slate-950/95 p-4 shadow-2xl shadow-slate-950/20 transition-all duration-200 md:static md:mt-0 md:flex md:border-0 md:bg-transparent md:p-0 md:shadow-none ${menuOpen ? 'block' : 'hidden'} md:block`}>
           <ul className="space-y-4 text-right md:space-y-0 md:flex md:items-center md:gap-8">
             <li>
-              <a href="#home" className="block text-sm font-medium text-black transition hover:text-sky-300">Home</a>
+              <a href="#home" className="block text-sm font-medium text-white transition hover:text-sky-300">Home</a>
             </li>
             <li>
-              <a href="#about" className="block text-sm font-medium text-black transition hover:text-sky-300">About</a>
+              <a href="#about" className="block text-sm font-medium text-white transition hover:text-sky-300">About</a>
             </li>
             <li>
-              <a href="#projects" className="block text-sm font-medium text-black transition hover:text-sky-300">Projects</a>
+              <a href="#projects" className="block text-sm font-medium text-white transition hover:text-sky-300">Projects</a>
             </li>
             <li>
-              <a href="#contact" className="block text-sm font-medium text-black transition hover:text-sky-300">Contact</a>
+              <a href="#contact" className="block text-sm font-medium text-white transition hover:text-sky-300">Contact</a>
             </li>
             
           </ul>
