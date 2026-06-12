@@ -8,7 +8,16 @@ function App() {
       <div className="min-h-screen bg-gray-600">
         <Header />
         <Cards />
+        
+          {/* frontend */}
+        <div >
+        <main>
+          <h1>My Portfolio</h1>
+        </main>
       </div>
+
+      </div>
+      
     </>
   )
 }
