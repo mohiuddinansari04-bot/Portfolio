@@ -10,7 +10,7 @@ function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900 p-2 text-slate-300 transition hover:border-slate-500 hover:text-white md:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900 p-2 text-slate-300 transition hover:border-slate-500 hover:text-white md:hidden hover:bg-slate-600"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-label="Toggle navigation"
@@ -18,7 +18,7 @@ function Header() {
           <span className="text-2xl">☰</span>
         </button>
 
-        <nav className={`absolute inset-x-4 top-full mt-2 rounded-3xl border border-slate-800 bg-slate-950/95 p-4 shadow-2xl shadow-slate-950/20 transition-all duration-200 md:static md:mt-0 md:flex md:border-0 md:bg-transparent md:p-0 md:shadow-none ${menuOpen ? 'block' : 'hidden'} md:block`}>
+        <nav className={`absolute inset-x-4 top-full mt-2 rounded-3xl border border-slate-800 bg-slate-500 p-4 shadow-2xl shadow-slate-950/20 transition-all duration-200 md:static md:mt-0 md:flex md:border-0 md:bg-transparent md:p-0 md:shadow-none ${menuOpen ? 'block' : 'hidden'} md:block`}>
           <ul className="space-y-4 text-right md:space-y-0 md:flex md:items-center md:gap-8">
             <li>
               <a href="#home" className="block text-sm font-medium text-slate-200 transition hover:text-sky-300">Home</a>
@@ -29,9 +29,7 @@ function Header() {
             <li>
               <a href="#projects" className="block text-sm font-medium text-slate-200 transition hover:text-sky-300">Projects</a>
             </li>
-            <li>
-              <a href="#contact" className="block rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-sky-300 transition hover:bg-slate-800 md:bg-transparent md:px-0 md:py-0 md:text-slate-200">Contact</a>
-            </li>
+            
           </ul>
         </nav>
       </div>
