@@ -4,7 +4,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className=" bg-white shadow-2xl backdrop-blur-xl ">
+    <header className=" bg-white  backdrop-blur-xl ">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="#home" className="text-lg font-semibold uppercase tracking-[0.2em] text-black">Ahmed Mohiuddin Ansari</a>
 
