@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className=" bg-white  backdrop-blur-xl ">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#home" className="text-lg font-semibold uppercase tracking-[0.2em] text-black">Ahmed Mohiuddin Ansari</a>
+        <a href="#home" className="text-lg font-semibold  text-black">Ahmed Mohiuddin Ansari</a>
 
         <button
           type="button"
@@ -28,6 +28,9 @@ function Header() {
             </li>
             <li>
               <a href="#projects" className="block text-sm font-medium text-black transition hover:text-sky-300">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" className="block text-sm font-medium text-black transition hover:text-sky-300">Contact</a>
             </li>
             
           </ul>
