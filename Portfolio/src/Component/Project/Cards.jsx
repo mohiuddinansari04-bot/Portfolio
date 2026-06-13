@@ -25,12 +25,12 @@ function Cards() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold mb-8">My Projects</h1>
-      <p className="text-lg">Here are some of my recent projects:</p>
+      <p className="text-2xl ">Here are some of my recent projects created by me using React and modern web technologies:</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
         {cardsData.map((card) => (
           <div key={card.id} className="w-full max-w-sm bg-gray-500 rounded-lg shadow-lg  overflow-hidden text-center p-4">
-            <img className="w-full h-40 object-cover rounded" src={card.imageUrl} alt={card.title} />
+     
             <h3 className=" text-xl font-semibold text-white">{card.title}</h3>
             <p className="mt-2 text-sm text-white">{card.description}</p>
             <a href={card.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition">
