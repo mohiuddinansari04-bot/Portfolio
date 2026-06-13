@@ -25,6 +25,7 @@ function Cards() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold mb-8">My Projects</h1>
+      <p className="text-lg">Here are some of my recent projects:</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
         {cardsData.map((card) => (
