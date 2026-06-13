@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className=" bg-gray-800 shadow-lg py-3 text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-blue-400">Portfolio</h1>
+        <h1 className="text-4xl font-bold text-blue-400">Portfolio</h1>
 
         <button
           type="button"
