@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -6,7 +7,7 @@ function Header() {
   return (
     <header className="bg-slate-950/95 border-b border-slate-800 shadow-xl shadow-slate-950/30 py-4 text-slate-100 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-cyan-300">Portfolio</h1>
+        <Link to="/" className="text-4xl font-bold text-cyan-300">Portfolio</Link>
 
         <button
           type="button"
@@ -21,18 +22,17 @@ function Header() {
         <nav className={`absolute inset-x-4 top-full mt-2 rounded-3xl border border-slate-800 bg-slate-950/95 p-4 shadow-2xl shadow-slate-950/20 transition-all duration-200 md:static md:mt-0 md:flex md:border-0 md:bg-transparent md:p-0 md:shadow-none ${menuOpen ? 'block' : 'hidden'} md:block`}>
           <ul className="space-y-4 text-right md:space-y-0 md:flex md:items-center md:gap-8">
             <li>
-              <a href="#home" className="block text-sm font-medium text-white transition hover:text-sky-300">Home</a>
+              <Link to="/" className="block text-sm font-medium text-white transition hover:text-sky-300">Home</Link>
             </li>
             <li>
-              <a href="#about" className="block text-sm font-medium text-white transition hover:text-sky-300">About</a>
+              <Link to="/about" className="block text-sm font-medium text-white transition hover:text-sky-300">About</Link>
             </li>
             <li>
-              <a href="#projects" className="block text-sm font-medium text-white transition hover:text-sky-300">Projects</a>
+              <Link to="/projects" className="block text-sm font-medium text-white transition hover:text-sky-300">Projects</Link>
             </li>
             <li>
-              <a href="#contact" className="block text-sm font-medium text-white transition hover:text-sky-300">Contact</a>
+              <Link to="/contact" className="block text-sm font-medium text-white transition hover:text-sky-300">Contact</Link>
             </li>
-            
           </ul>
         </nav>
       </div>
