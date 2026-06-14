@@ -17,7 +17,7 @@ function Cards() {
     {
       id: "3",
       title: "Project 3",
-      description: "Description of Project 3",
+      description: "Example project description for Project 3. This project demonstrates the use of React and Tailwind CSS to create a responsive and visually appealing web application.",
       imageUrl: "https://via.placeholder.com/150",
       link: ""
     },
@@ -31,7 +31,7 @@ function Cards() {
         {cardsData.map((card) => (
           <div key={card.id} className="w-full max-w-sm bg-gray-500 rounded-lg shadow-lg overflow-hidden text-center p-6">
             <h3 className="text-2xl font-semibold text-white">{card.title}</h3>
-            <p className="mt-5 text-sm text-white">{card.description}</p>
+            <p className="mt-5 text-lg text-white">{card.description}</p>
             <a href={card.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition">
               View Project
             </a>
