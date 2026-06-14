@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import Header from './Component/Header'
-import Cards from './Component/Project/Cards'
+import Cards from './Component/Cards/Cards'
 
 function App() {
 
