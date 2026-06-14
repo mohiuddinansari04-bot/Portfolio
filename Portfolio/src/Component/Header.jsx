@@ -4,13 +4,13 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className=" bg-gray-800 shadow-lg py-3 text-white">
+    <header className="bg-slate-950/95 border-b border-slate-800 shadow-xl shadow-slate-950/30 py-4 text-slate-100 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-blue-400">Portfolio</h1>
+        <h1 className="text-4xl font-bold text-cyan-300">Portfolio</h1>
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900 p-2 text-slate-300 transition hover:border-slate-500 hover:text-white md:hidden hover:bg-slate-700"
+          className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/90 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-white md:hidden hover:bg-slate-800"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-label="Toggle navigation"
