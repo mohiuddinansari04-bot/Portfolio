@@ -24,9 +24,6 @@ function Header() {
               <a href="#home" className="block text-sm font-medium text-white transition hover:text-sky-300">Home</a>
             </li>
             <li>
-              <a href="#about" className="block text-sm font-medium text-white transition hover:text-sky-300">About</a>
-            </li>
-            <li>
               <a href="#projects" className="block text-sm font-medium text-white transition hover:text-sky-300">Projects</a>
             </li>
             <li>
