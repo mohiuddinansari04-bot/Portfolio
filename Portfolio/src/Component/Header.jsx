@@ -13,7 +13,7 @@ function Header() {
           className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/90 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-white md:hidden hover:bg-slate-800"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
-          aria-label="Toggle navigation"
+          aria-label="Toggle   navigation"
         >
           <span className="text-2xl">☰</span>
         </button>
