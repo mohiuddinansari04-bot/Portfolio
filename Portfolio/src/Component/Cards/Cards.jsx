@@ -30,9 +30,9 @@ function Cards() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12 justify-items-center">
         {cardsData.map((card) => (
           <div key={card.id} className="w-full max-w-sm rounded-3xl border border-slate-700 bg-slate-900/95 shadow-2xl shadow-slate-950/40 overflow-hidden text-center p-6">
-            <h3 className="text-2xl font-semibold text-cyan-200">{card.title}</h3>
+            <h3 className="text-2xl font-semibold text-red-200">{card.title}</h3>
             <p className="mt-5 text-base leading-7 text-slate-300">{card.description}</p>
-            <a href={card.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-medium text-slate-950 transition hover:bg-cyan-400">
+            <a href={card.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block rounded-full bg-red-500 px-5 py-2.5 text-sm font-medium text-slate-950 transition hover:bg-red-400">
               View Project
             </a>
           </div>
