@@ -1,12 +1,12 @@
 import React from 'react'
-import Cards from '../Cards'
+import Cardspage from '../Cards/Cards'
 
 function Project() {
   return (
    <>
-   <Cards />
+   <Cardspage />
    </>
   )
 }
 
-export default Project
+export default Project;

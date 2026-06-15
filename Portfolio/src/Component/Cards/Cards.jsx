@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Cards() {
+function Cardspage() {
   const cardsData = [
     {
       id: "1",
@@ -42,4 +42,4 @@ function Cards() {
   )
 }
 
-export default Cards;
+export default Cardspage;
