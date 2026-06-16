@@ -5,39 +5,86 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="bg-slate-950/95 border-b border-slate-800 shadow-xl shadow-slate-950/30 py-4 text-slate-100 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-red-400">Portfolio</h1>
+    <header className="sticky top-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/10 py-5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <NavLink to="/" className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400 hover:scale-105 transition-transform">
+            Portfolio
+          </NavLink>
 
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/90 p-2 text-slate-300 transition hover:border-red-300 hover:text-white md:hidden hover:bg-slate-800"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-expanded={menuOpen}
-          aria-label="Toggle navigation"
-        >
-          <span className="text-2xl">☰</span>
-        </button>
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex items-center gap-8">
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => `text-sm font-medium transition-all ${
+                isActive ? 'text-red-400 underline underline-offset-4' : 'text-slate-300 hover:text-white'
+              }`}
+            >
+              Home
+            </NavLink>
+            <NavLink 
+              to="/projects" 
+              className={({ isActive }) => `text-sm font-medium transition-all ${
+                isActive ? 'text-red-400 underline underline-offset-4' : 'text-slate-300 hover:text-white'
+              }`}
+            >
+              Projects
+            </NavLink>
+            <NavLink 
+              to="/contact" 
+              className={({ isActive }) => `text-sm font-medium px-4 py-2 rounded-full transition-all ${
+                isActive ? 'bg-red-400 text-white' : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+            >
+              Contact
+            </NavLink>
+          </nav>
 
-        <nav className={`absolute inset-x-4 top-full mt-2 rounded-3xl border border-slate-800 bg-slate-950/95 p-4 shadow-2xl shadow-slate-950/20 transition-all duration-200 md:static md:mt-0 md:flex md:border-0 md:bg-transparent md:p-0 md:shadow-none ${menuOpen ? 'block' : 'hidden'} md:block`}>
-          <ul className="space-y-4 text-right md:space-y-0 md:flex md:items-center md:gap-8">
-            <li>
-              <NavLink to="/" className={({ isActive }) => `block text-sm font-medium transition ${isActive ? 'text-red-300' : 'text-white hover:text-red-300'}`}>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/projects" className={({ isActive }) => `block text-sm font-medium transition ${isActive ? 'text-red-300' : 'text-white hover:text-red-300'}`}>
-                Projects
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" className={({ isActive }) => `block text-sm font-medium transition ${isActive ? 'text-red-300' : 'text-white hover:text-red-300'}`}>
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden flex flex-col gap-1 p-2 hover:bg-white/10 rounded-lg transition"
+            aria-label="Toggle menu"
+          >
+            <span className={`w-6 h-0.5 bg-white transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-white transition-all ${menuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-white transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-3 border-t border-white/10 pt-4">
+            <NavLink 
+              to="/" 
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) => `text-sm font-medium px-4 py-2 rounded-lg transition-all ${
+                isActive ? 'bg-red-400 text-white' : 'text-slate-300 hover:bg-white/10'
+              }`}
+            >
+              Home
+            </NavLink>
+            <NavLink 
+              to="/projects" 
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) => `text-sm font-medium px-4 py-2 rounded-lg transition-all ${
+                isActive ? 'bg-red-400 text-white' : 'text-slate-300 hover:bg-white/10'
+              }`}
+            >
+              Projects
+            </NavLink>
+            <NavLink 
+              to="/contact" 
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) => `text-sm font-medium px-4 py-2 rounded-lg transition-all ${
+                isActive ? 'bg-red-400 text-white' : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+            >
+              Contact
+            </NavLink>
+          </nav>
+        )}
       </div>
     </header>
   )

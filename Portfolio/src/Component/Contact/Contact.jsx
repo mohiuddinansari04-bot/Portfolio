@@ -1,152 +1,203 @@
-﻿import { useState } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+﻿import React, { useState } from 'react'
 
 function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+  const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+    e.preventDefault()
+    // Here you would typically send the form data to a backend
+    console.log('Form submitted:', formData)
+    setSubmitted(true)
+    setTimeout(() => {
+      setFormData({ name: '', email: '', subject: '', message: '' })
+      setSubmitted(false)
+    }, 3000)
+  }
 
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
   return (
-    <section className="w-full px-6 py-16 bg-black">
-      <div className="max-w-6xl mx-auto bg-[#161616] border border-[#252525] rounded-3xl p-10 md:p-14">
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left Side */}
-          <div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white">
-              Get In Touch
-            </h1>
+    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      {/* Header */}
+      <div className="space-y-4 text-center mb-16">
+        <p className="text-base font-semibold uppercase tracking-widest text-red-400">Get In Touch</p>
+        <h2 className="text-4xl sm:text-5xl font-bold text-white">Contact Me</h2>
+        <p className="mx-auto max-w-2xl text-lg text-slate-300">
+          Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together.
+        </p>
+      </div>
 
-            <p className="text-gray-300 mt-6 max-w-md leading-8">
-              Currently open for new opportunities. Whether you have a question
-              or just want to say hi, I'll try my best to get back to you!
-            </p>
-
-            <form className="mt-10 space-y-6" onSubmit={handleSubmit}>
-              <div>
-                <label className="block text-xs tracking-[3px] text-white mb-2">
-                  NAME
-                </label>
-
-                <input
-                  type="text"
-                  placeholder="Enter Your Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full bg-black border border-[#2a2a2a] rounded-lg p-4 text-white outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs tracking-[3px] text-white mb-2">
-                  EMAIL
-                </label>
-
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full bg-black border border-[#2a2a2a] rounded-lg p-4 text-white outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs tracking-[3px] text-white mb-2">
-                  MESSAGE
-                </label>
-
-                <textarea
-                  rows="5"
-                  placeholder="How can I help you?"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full bg-black border border-[#2a2a2a] rounded-lg p-4 text-white outline-none resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="px-8 py-4 border border-[#E8D5B5] text-[#E8D5B5] rounded-full hover:bg-[#E8D5B5] hover:text-black transition"
-              >
-                Let's Talk →
-              </button>
-            </form>
+      <div className="grid gap-12 lg:grid-cols-3">
+        {/* Left: Contact Info */}
+        <div className="space-y-8 lg:col-span-1">
+          {/* Full Name */}
+          <div className="rounded-xl glass-effect border border-slate-700 p-6 space-y-3 hover:border-red-400/60 transition-all">
+            <div className="text-3xl text-red-400">👤</div>
+            <h3 className="text-lg font-bold text-white">Full Name</h3>
+            <p className="text-slate-300">Ahmed Mohiuddin Ansari</p>
           </div>
 
-          {/* Right Side */}
-          <div className="md:pl-10 flex flex-col justify-center">
-            <div>
-              <h3 className="text-xs tracking-[3px] text-white mb-4">
-                DIRECT CONTACT
-              </h3>
+          {/* Email */}
+          <div className="rounded-xl glass-effect border border-slate-700 p-6 space-y-3 hover:border-red-400/60 transition-all">
+            <div className="text-3xl text-red-400">📧</div>
+            <h3 className="text-lg font-bold text-white">Gmail</h3>
+            <a href="mailto:ahmedmohiuddinansari@gmail.com" className="text-slate-300 hover:text-red-400 transition-colors break-all">
+              ahmedmohiuddinansari@gmail.com
+            </a>
+            <p className="text-sm text-slate-400">Fast email response</p>
+          </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#2A2A2A] flex items-center justify-center text-white">
-                  <FaEnvelope size={20} />
-                </div>
+          {/* Phone */}
+          <div className="rounded-xl glass-effect border border-slate-700 p-6 space-y-3 hover:border-red-400/60 transition-all">
+            <div className="text-3xl text-red-400">📱</div>
+            <h3 className="text-lg font-bold text-white">Phone</h3>
+            <a href="tel:+1234567890" className="text-slate-300 hover:text-red-400 transition-colors">
+              +91 9860569507
+            </a>
+            <p className="text-sm text-slate-400">WhatsApp available</p>
+          </div>
 
-                <p className="text-white">shaikhmubashirahmed123@gmail.com</p>
-              </div>
-            </div>
-
-            <div className="mt-12">
-              <h3 className="text-xs tracking-[3px] text-white mb-4">
-                SOCIAL PROFILES
-              </h3>
-
-              <div className="space-y-4">
-                <a
-                  href="https://github.com/Mubashir-85"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-4 text-white"
-                >
-                  <div className="w-12 h-12 rounded-full bg-[#2A2A2A] flex items-center justify-center">
-                    <FaGithub size={20} />
-                  </div>
-                  GitHub Profile
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/-mubashir-shaikh-/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-4 text-white"
-                >
-                  <div className="w-12 h-12 rounded-full bg-[#2A2A2A] flex items-center justify-center">
-                    <FaLinkedin size={20} />
-                  </div>
-                  LinkedIn Network
-                </a>
-              </div>
+          {/* Social Links */}
+          <div className="rounded-xl glass-effect border border-slate-700 p-6 space-y-4">
+            <h3 className="text-lg font-bold text-white">Follow me on</h3>
+            <div className="flex gap-4">
+              <a href="https://github.com/mohiuddinansari04-bot?tab=overview&from=2026-06-01&to=2026-06-15" className="flex h-10 w-20 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-red-500 transition-all">
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/ahmedmohiuddinansari/" className="flex h-10 w-20 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-red-500 transition-all">
+                LinkedIn
+              </a>
+              
             </div>
           </div>
         </div>
+
+        {/* Right: Contact Form */}
+        <div className="lg:col-span-2">
+          <form onSubmit={handleSubmit} className="rounded-xl glass-effect border border-red-500/30 p-8 space-y-6">
+            {submitted && (
+              <div className="rounded-lg bg-green-500/20 border border-green-500/50 p-4 text-green-400 text-center">
+                ✓ Thanks for reaching out! I'll get back to you soon.
+              </div>
+            )}
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {/* Name */}
+              <div className="space-y-2">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-300">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full rounded-lg bg-slate-800/50 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 transition-all focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              {/* Email */}
+              <div className="space-y-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-300">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full rounded-lg bg-slate-800/50 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 transition-all focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
+
+            {/* Subject */}
+            <div className="space-y-2">
+              <label htmlFor="subject" className="block text-sm font-medium text-slate-300">
+                Subject *
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                className="w-full rounded-lg bg-slate-800/50 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 transition-all focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                placeholder="Project Inquiry"
+              />
+            </div>
+
+            {/* Message */}
+            <div className="space-y-2">
+              <label htmlFor="message" className="block text-sm font-medium text-slate-300">
+                Message *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="6"
+                className="w-full rounded-lg bg-slate-800/50 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 transition-all focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-500/20 resize-none"
+                placeholder="Tell me about your project or inquiry..."
+              ></textarea>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full rounded-lg bg-red-500 py-3 font-semibold text-white transition-all hover:bg-red-600 hover:shadow-lg hover:shadow-red-500/50 active:scale-95"
+            >
+              Send Message
+            </button>
+
+            <p className="text-center text-sm text-slate-400">
+              I'll respond to you as soon as possible.
+            </p>
+          </form>
+        </div>
+      </div>
+
+      {/* Additional Info */}
+      <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="rounded-lg glass-effect border border-slate-700 p-6 text-center space-y-2">
+          <p className="text-3xl">⚡</p>
+          <h3 className="font-bold text-white">Quick Response</h3>
+          <p className="text-sm text-slate-400">I typically respond within 24 hours</p>
+        </div>
+        <div className="rounded-lg glass-effect border border-slate-700 p-6 text-center space-y-2">
+          <p className="text-3xl">🎯</p>
+          <h3 className="font-bold text-white">Flexible</h3>
+          <p className="text-sm text-slate-400">Open to freelance, full-time, and project work</p>
+        </div>
+        <div className="rounded-lg glass-effect border border-slate-700 p-6 text-center space-y-2">
+          <p className="text-3xl">🚀</p>
+          <h3 className="font-bold text-white">Ready to Start</h3>
+          <p className="text-sm text-slate-400">Let's build something amazing together</p>
+        </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Contact;
+export default Contact
