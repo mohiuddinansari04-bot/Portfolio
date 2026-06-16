@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@keyframes float-card {
+  0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+  50% { transform: translateY(-12px) rotateX(3deg) rotateY(6deg); }
+}
+
+.hero-3d {
+  animation: float-card 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(248, 113, 113, 0.35);
+}

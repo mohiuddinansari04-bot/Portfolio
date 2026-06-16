@@ -1,16 +1,20 @@
-// import React from 'react'
-// import Layout from '../Layout'
-// import Project from '../ProjectPages/Project'
-// import {  Routes, Route } from 'react-router-dom'
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Layout from '../Layout'
+import Hero from '../Hero/Hero'
+import Project from '../ProjectPages/Project'
+import Contact from '../Contact/Contact'
 
-// function AppRouter() {
-//   return (
-//     <Routes>
-//       <Route path="/" element={<Layout />}>
-//         <Route path="project" element={<Project />} />
-//       </Route>
-//     </Routes>
-//   )a
-// }
+function AppRouter() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Hero />} />
+        <Route path="projects" element={<Project />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Routes>
+  )
+}
 
-// export default AppRouter
+export default AppRouter

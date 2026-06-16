@@ -1,22 +1,11 @@
 import './App.css'
-import { useState } from 'react'
-import Header from './Component/Header'
-import Contact from './Component/Contact/Contact'
-
+import AppRouter from './Component/Routers/Router'
 
 function App() {
-
   return (
-    <>
-      <div className="min-h-screen bg-slate-950 text-slate-100">
-        <Header />
-        <Contact/>
-        
-   
-      
-
-      </div>
-    </>
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <AppRouter />
+    </div>
   )
 }
 
