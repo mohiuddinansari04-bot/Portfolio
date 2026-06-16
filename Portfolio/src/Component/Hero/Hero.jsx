@@ -14,7 +14,7 @@ function Hero() {
           </p>
         </div>
 
-        <div className="grid gap-5 rounded-[32px] border border-slate-800 bg-slate-950/90 p-6 text-slate-200 shadow-xl shadow-slate-950/20 sm:grid-cols-3">
+        <div className="grid gap-5 rounded-32px border border-slate-800 bg-slate-950/90 p-6 text-slate-200 shadow-xl shadow-slate-950/20 sm:grid-cols-3">
           <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 text-center">
             <h3 className="text-sm uppercase tracking-[0.32em] text-slate-400">What I do</h3>
             <p className="mt-4 text-xl font-semibold text-white">Frontend Development</p>
