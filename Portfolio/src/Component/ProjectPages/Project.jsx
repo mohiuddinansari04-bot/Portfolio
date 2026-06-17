@@ -6,7 +6,7 @@ function Project() {
       id: 1,
       title: "Smart-Trip",
       description: "A responsive travel booking website where you can explore destinations, check prices, and book your next adventure. Built with React and beautiful UI animations.",
-      tech: ["React", "Tailwind CSS", "API"],
+      tech: ["React", "Tailwind CSS"],
       emoji: "✈️",
       link: "#",
     },
@@ -14,7 +14,7 @@ function Project() {
       id: 2,
       title: "SocialApp",
       description: "Social media platform where users can create posts, like, comment, and connect with others. Features real-time updates and a smooth feed experience.",
-      tech: ["React", "Tailwind CSS", "AIP"],
+      tech: ["React", "Tailwind CSS", "API"],
       emoji: "👥",
       link: "#",
     },
@@ -23,7 +23,7 @@ function Project() {
       title: "Portfolio",
       description: "A personal portfolio website to showcase my skills, projects, and experience. Built with React and styled with Tailwind CSS.",
       tech: ["React", "Tailwind CSS"],
-      emoji: "�",
+      emoji: "💼",
       link: "#",
     },
   ]
@@ -45,7 +45,7 @@ function Project() {
             className="group rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:border-red-400/50 transition-all hover:-translate-y-2 card-hover"
           >
             {/* Project Header */}
-            <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 p-8 flex items-center justify-center min-h-[180px]">
+            <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 p-8 flex items-center justify-center min-h-180px">
               <div className="text-6xl group-hover:scale-110 transition-transform">{project.emoji}</div>
             </div>
 
