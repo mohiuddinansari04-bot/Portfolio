@@ -45,7 +45,7 @@ function Project() {
             className="group rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:border-red-400/50 transition-all hover:-translate-y-2 card-hover"
           >
             {/* Project Header */}
-            <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 p-8 flex items-center justify-center min-h-180px">
+            <div className=" bg-gradient-to-br from-red-500/10 to-pink-500/10 p-8 flex items-center justify-center min-h-180px">
               <div className="text-6xl group-hover:scale-110 transition-transform">{project.emoji}</div>
             </div>
 
