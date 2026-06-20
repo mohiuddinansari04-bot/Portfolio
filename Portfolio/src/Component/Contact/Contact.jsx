@@ -1,4 +1,5 @@
 ﻿import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -73,13 +74,12 @@ function Contact() {
           <div className="rounded-xl glass-effect border border-slate-700 p-6 space-y-4">
             <h3 className="text-lg font-bold text-white">Follow me on</h3>
             <div className="flex gap-4">
-              <a href="https://github.com/mohiuddinansari04-bot?tab=overview&from=2026-06-01&to=2026-06-15" className="flex h-10 w-20 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-red-500 transition-all">
+              <Link to="https://github.com/mohiuddinansari04-bot?tab=overview&from=2026-06-01&to=2026-06-15" className="flex h-10 w-20 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-red-500 transition-all">
                 GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/ahmedmohiuddinansari/" className="flex h-10 w-20 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-red-500 transition-all">
+              </Link>
+              <Link to="https://www.linkedin.com/in/ahmedmohiuddinansari/" className="flex h-10 w-20 items-center justify-center rounded-lg bg-slate-800 text-white hover:bg-red-500 transition-all">
                 LinkedIn
-              </a>
-              
+              </Link>
             </div>
           </div>
         </div>
