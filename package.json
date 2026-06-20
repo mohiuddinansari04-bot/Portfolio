@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite Portfolio",
-    "build": "vite build Portfolio",
+    "build": "vite build ",
     "lint": "eslint .",
     "preview": "vite preview Portfolio"
   },
