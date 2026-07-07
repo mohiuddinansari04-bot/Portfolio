@@ -5,12 +5,12 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/10 py-5">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md py-4">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <NavLink to="/" className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400 hover:scale-105 transition-transform">
-            Portfolio
+          <NavLink to="/" className="text-xl font-semibold tracking-[0.2em] text-gray-100 transition-transform hover:scale-105">
+            AHMED ANSARI
           </NavLink>
 
           {/* Desktop Menu */}
@@ -18,7 +18,7 @@ function Header() {
             <NavLink 
               to="/" 
               className={({ isActive }) => `text-sm font-medium transition-all ${
-                isActive ? 'text-red-400 underline underline-offset-4' : 'text-slate-300 hover:text-white'
+                isActive ? 'text-white' : 'text-gray-400 hover:text-white'
               }`}
             >
               Home
@@ -26,15 +26,15 @@ function Header() {
             <NavLink 
               to="/projects" 
               className={({ isActive }) => `text-sm font-medium transition-all ${
-                isActive ? 'text-red-400 underline underline-offset-4' : 'text-slate-300 hover:text-white'
+                isActive ? 'text-white' : 'text-gray-400 hover:text-white'
               }`}
             >
               Projects
             </NavLink>
             <NavLink 
               to="/contact" 
-              className={({ isActive }) => `text-sm font-medium px-4 py-2 rounded-full transition-all ${
-                isActive ? 'bg-red-400 text-white' : 'bg-white/10 text-white hover:bg-white/20'
+              className={({ isActive }) => `text-sm font-medium rounded-full px-4 py-2 transition-all ${
+                isActive ? 'bg-gray-200 text-black' : 'bg-white/10 text-gray-100 hover:bg-white/20'
               }`}
             >
               Contact

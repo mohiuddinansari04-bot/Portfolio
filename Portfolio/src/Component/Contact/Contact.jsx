@@ -32,11 +32,11 @@ function Contact() {
   return (
     <section className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
       {/* Header */}
-      <div className="space-y-4 text-center mb-16">
-        <p className="text-base font-semibold uppercase tracking-widest text-red-400">Get In Touch</p>
-        <h2 className="text-4xl sm:text-5xl font-bold text-white">Contact Me</h2>
+      <div className="mb-16 space-y-4 text-center">
+        <p className="text-base font-semibold uppercase tracking-[0.3em] text-gray-400">Get In Touch</p>
+        <h2 className="text-4xl font-bold text-white sm:text-5xl">Let&apos;s Connect</h2>
         <p className="mx-auto max-w-2xl text-lg text-slate-300">
-          Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together.
+          Whether you need a polished web presence or a custom frontend build, I’d be happy to discuss your goals.
         </p>
       </div>
 
@@ -86,7 +86,7 @@ function Contact() {
 
         {/* Right: Contact Form */}
         <div className="lg:col-span-2">
-          <form onSubmit={handleSubmit} className="rounded-xl glass-effect border border-red-500/30 p-8 space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 rounded-xl border border-white/10 bg-white/5 p-8">
             {submitted && (
               <div className="rounded-lg bg-green-500/20 border border-green-500/50 p-4 text-green-400 text-center">
                 ✓ Thanks for reaching out! I'll get back to you soon.
@@ -166,36 +166,18 @@ function Contact() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full rounded-lg bg-red-500 py-3 font-semibold text-white transition-all hover:bg-red-600 hover:shadow-lg hover:shadow-red-500/50 active:scale-95"
+              className="w-full rounded-lg bg-gray-200 py-3 font-semibold text-black transition-all hover:bg-white active:scale-95"
             >
               Send Message
             </button>
 
             <p className="text-center text-sm text-slate-400">
-              I'll respond to you as soon as possible.
+              I typically reply within one business day.
             </p>
           </form>
         </div>
       </div>
 
-      {/* Additional Info */}
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
-        <div className="rounded-lg glass-effect border border-slate-700 p-6 text-center space-y-2">
-          <p className="text-3xl">⚡</p>
-          <h3 className="font-bold text-white">Quick Response</h3>
-          <p className="text-sm text-slate-400">I typically respond within 24 hours</p>
-        </div>
-        <div className="rounded-lg glass-effect border border-slate-700 p-6 text-center space-y-2">
-          <p className="text-3xl">🎯</p>
-          <h3 className="font-bold text-white">Flexible</h3>
-          <p className="text-sm text-slate-400">Open to freelance, full-time, and project work</p>
-        </div>
-        <div className="rounded-lg glass-effect border border-slate-700 p-6 text-center space-y-2">
-          <p className="text-3xl">🚀</p>
-          <h3 className="font-bold text-white">Ready to Start</h3>
-          <p className="text-sm text-slate-400">Let's build something amazing together</p>
-        </div>
-      </div>
     </section>
   )
 }
