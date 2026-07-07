@@ -5,13 +5,13 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md py-4">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-gray-950   backdrop-blur-md py-4">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <NavLink to="/" className="text-xl font-semibold tracking-[0.2em] text-gray-100 transition-transform hover:scale-105">
-            AHMED ANSARI
-          </NavLink>
+          <h1 className="text-xl font-semibold tracking-[0.2em] text-gray-100 ">
+            AHMED MOHIUDDIN ANSARI
+          </h1>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8">
