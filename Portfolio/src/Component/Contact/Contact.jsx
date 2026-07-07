@@ -30,7 +30,7 @@ function Contact() {
   }
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="space-y-4 text-center mb-16">
         <p className="text-base font-semibold uppercase tracking-widest text-red-400">Get In Touch</p>
@@ -47,15 +47,15 @@ function Contact() {
           <div className="rounded-xl glass-effect border border-slate-700 p-6 space-y-3 hover:border-red-400/60 transition-all">
             <div className="text-3xl text-red-400">👤</div>
             <h3 className="text-lg font-bold text-white">Full Name</h3>
-            <p className="text-slate-300">Ahmed Mohiuddin Ansari</p>
+            <p className="text-slate-300">Ahmed Mohiuddin Zaheeruddin Ansari</p>
           </div>
 
           {/* Email */}
           <div className="rounded-xl glass-effect border border-slate-700 p-6 space-y-3 hover:border-red-400/60 transition-all">
             <div className="text-3xl text-red-400">📧</div>
             <h3 className="text-lg font-bold text-white">Gmail</h3>
-            <a href="mailto:ahmedmohiuddinansari@gmail.com" className="text-slate-300 hover:text-red-400 transition-colors break-all">
-              ahmedmohiuddinansari@gmail.com
+            <a href="mailto:mohiuddinansari@gmail.com" className="text-slate-300 hover:text-red-400 transition-colors break-all">
+              mohiuddinansari@gmail.com
             </a>
             <p className="text-sm text-slate-400">Fast email response</p>
           </div>

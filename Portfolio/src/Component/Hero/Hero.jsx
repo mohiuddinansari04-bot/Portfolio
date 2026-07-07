@@ -15,7 +15,7 @@ function Hero() {
         <div className="space-y-6 fade-in-up">
           {/* Greeting */}
           <div className="space-y-2">
-            <p className="text-lg text-red-400 font-medium animate-bounce">Hey there! </p>
+            <p className="text-lg text-red-400 font-medium ">Hey there! </p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
               I'm <span className="text-glow text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">Ahmed Mohiuddin Ansari</span>
             </h1>
@@ -44,7 +44,7 @@ function Hero() {
 
           {/* 3D Languages & Tools Card */}
           <div className="mx-auto max-w-3xl">
-            <div className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-slate-900/90 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.45)] hero-3d">
+            <div className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-slate-900/90 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.45)] hero-3">
               <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-transparent to-pink-500/10 opacity-70 pointer-events-none"></div>
               <div className="relative grid gap-4 sm:grid-cols-2">
                 <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-5 text-center">
@@ -85,11 +85,6 @@ function Hero() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
       </div>
     </section>
   )

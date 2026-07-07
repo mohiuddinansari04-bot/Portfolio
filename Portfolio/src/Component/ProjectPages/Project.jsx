@@ -8,7 +8,7 @@ function Project() {
       description: "A responsive travel booking website where you can explore destinations, check prices, and book your next adventure. Built with React and beautiful UI animations.",
       tech: ["React", "Tailwind CSS"],
       emoji: "✈️",
-      link: "#",
+      link: "https://smart-trip-9mym.vercel.app/",
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ function Project() {
       description: "Social media platform where users can create posts, like, comment, and connect with others. Features real-time updates and a smooth feed experience.",
       tech: ["React", "Tailwind CSS", "API"],
       emoji: "👥",
-      link: "#",
+      link: "https://social-app-p5yx.vercel.app/",
     },
     {
       id: 3,
@@ -26,10 +26,18 @@ function Project() {
       emoji: "💼",
       link: "#",
     },
+    {
+      id: 4,
+      title: "Hotle booking",
+      description: "LuxeNest is a responsive hotel booking website developed using React.js and Tailwind CSS. It allows users to browse hotels, view room details, pricing, amenities, and experience a modern booking interface with responsive design and smooth navigation.",
+      tech: ["React", "Tailwind CSS ", "API"],
+      emoji: "🏨",
+      link: "#",
+    },
   ]
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-8xl px-4 py-16 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="text-center mb-16">
         <p className="text-sm font-semibold text-red-400 mb-2">My Work</p>
